@@ -27,21 +27,27 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 20px;
   font-family: "DM Sans", sans-serif;
   color: hsl(210, 5%, 93%);
   gap: 2rem;
 }
 body .card {
-  display: flex;
-  padding: 1rem;
+  position: relative;
+}
+body .card-container {
+  padding: 1.25rem;
   border: 1px solid #fff;
   border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px black;
 }
-body .card-content {
-  padding: 1rem;
+body .card-container.green {
+  background: linear-gradient(135deg, hsl(120, 82%, 33%), hsl(155, 100%, 50%));
 }
-body .card-content .description {
+body .card-container.purple {
+  background: linear-gradient(135deg, hsl(275, 86%, 36%), hsl(292, 84%, 61%));
+}
+body .description {
   margin-bottom: 1em;
 }
 body .description .small-text {
