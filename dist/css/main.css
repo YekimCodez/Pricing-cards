@@ -1,0 +1,49 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-style: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  max-width: 65ch;
+}
+
+body {
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  color: hsl(210, 5%, 93%);
+  gap: 2rem;
+}
+body .card {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+body .card-content {
+  padding: 1rem;
+}
+body .card-content .description {
+  margin-bottom: 1em;
+}
+body .description .small-text {
+  font-size: 14px;
+}/*# sourceMappingURL=main.css.map */

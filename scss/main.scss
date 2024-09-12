@@ -1,0 +1,35 @@
+@import './resets';
+@import './typography';
+@import './colors';
+
+// Body 
+body {
+    background-color: $bg-color-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: $font-family-primary;
+    color: $text-color-primary;
+    gap: 2rem;
+
+    .card {
+        display: flex;
+        padding: 1rem;        
+        border: 1px solid #fff;
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px $card-box-shadow;
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+
+    .card-content .description {
+        margin-bottom: 1em;
+    }
+
+    .description .small-text {
+        font-size: $font-size-sm;
+    }
+}
