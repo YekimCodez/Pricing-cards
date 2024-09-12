@@ -32,13 +32,25 @@ body {
   color: hsl(210, 5%, 93%);
   gap: 2rem;
 }
-body .card {
-  position: relative;
+body .card-container::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(0, 255, 0, 0.5), transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
 }
 body .card-container {
   padding: 1.25rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 15px black;
+  background: linear-gradient(135deg, hsl(120, 82%, 33%), hsl(155, 100%, 50%));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
 }
 body .card-container.green {
   background: linear-gradient(135deg, hsl(120, 82%, 33%), hsl(155, 100%, 50%));
@@ -55,6 +67,18 @@ body .card-container::before {
   height: 20px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
+}
+body ul {
+  list-style: none;
+  padding: 0;
+}
+body ul li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+body ul li.check {
+  font-size: 18px;
+  font-weight: 700;
 }
 body .description {
   margin-bottom: 1em;

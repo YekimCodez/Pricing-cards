@@ -14,14 +14,26 @@ body {
     color: $text-color-primary;
     gap: 2rem;
 
-    .card {
-        position: relative;
+    .card-container::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle, rgba(0, 255, 0, 0.5), transparent);
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
     }
 
     .card-container {
         padding: 1.25rem;       
         border-radius: 1rem;
-        box-shadow: 0 4px 15px rgba($color: #000000, $alpha: 1.0);
+        background: linear-gradient(135deg, hsl(120, 82%, 33%), hsl(155, 100%, 50%));
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        position: relative;
+        transition: all 0.3s ease;
 
         &.green {
             background: linear-gradient(135deg, hsl(120, 82%, 33%), hsl(155, 100%, 50%));
@@ -40,6 +52,21 @@ body {
             height: 20px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            position: relative;
+            margin-bottom: 0.5rem;
+
+            &.check {
+                font-size: $font-size-md;
+                font-weight: $font-weight-bold;
+            }
         }
     }
 
