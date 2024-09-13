@@ -24,23 +24,27 @@ body {
         background: radial-gradient(circle, rgba(0, 255, 0, 0.5), transparent);
         border-radius: 50%;
         box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        animation: glow 2s infinite alternate;
     }
 
     .card-container {
+        width: 300px;
         padding: 1.25rem;       
         border-radius: 1rem;
-        background: linear-gradient(135deg, hsl(120, 82%, 33%), hsl(155, 100%, 50%));
+        background: linear-gradient(135deg, hsl(120, 87%, 42%), hsl(155, 100%, 50%));
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         overflow: hidden;
         position: relative;
         transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
 
         &.green {
-            background: linear-gradient(135deg, hsl(120, 82%, 33%), hsl(155, 100%, 50%));
+            background: linear-gradient(135deg, hsl(120, 91%, 39%), hsl(155, 100%, 50%));
         }
 
         &.purple {
-            background: linear-gradient(135deg, hsl(275, 86%, 36%), hsl(292, 84%, 61%));
+            background: linear-gradient(135deg, hsl(275, 94%, 40%), hsl(292, 84%, 61%));
         }
 
         &::before {
@@ -52,6 +56,7 @@ body {
             height: 20px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 10px 5px rgba(206, 186, 186, 0.5);
         }
     }
 
@@ -60,18 +65,27 @@ body {
         padding: 0;
 
         li {
-            position: relative;
+            display: flex;
             margin-bottom: 0.5rem;
 
-            &.check {
+            ion-icon {
                 font-size: $font-size-md;
                 font-weight: $font-weight-bold;
+
+                &.check {
+                    color: hsl(120, 67%, 72%);
+                }
             }
         }
     }
 
     .description {
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+    }
+
+    .description p {
+        margin-bottom: 1.5em;
     }
 
     .description .small-text {
@@ -83,8 +97,9 @@ body {
         margin-top: 1.5rem;
         border: none;
         border-radius: 0.5rem;
-        background-color: #fff;
-        color: $text-color-secondary;
+        background-color: hsl(120, 91%, 39%);
+        color: $text-color-primary;
+        font-size: $font-size-md;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
@@ -98,8 +113,9 @@ body {
         margin-top: 1.5rem;
         border: none;
         border-radius: 0.5rem;
-        background-color: #fff;
-        color: $text-color-secondary;
+        background-color: hsl(275, 94%, 40%);
+        color: $text-color-primary;
+        font-size: $font-size-md;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
